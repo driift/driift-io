@@ -7,6 +7,12 @@ HomeController = RouteController.extend({
   }
 })
 
+Template.home.helpers({
+  email: function () {
+    return Session.get('email')
+  }
+})
+
 Template.home.events({
   'submit': function (evt, tmpl) {
     evt.preventDefault()
@@ -14,17 +20,18 @@ Template.home.events({
     var email = $('#input-email').val()
 
     if(email) {
+      Session.set('email', email)
 
       Emails.insert({
         email: email,
         createdAt: Date.now()
       })
 
-      ga('send', 'event', 'submit', 'email');
+      ga('send', 'event', 'submit-email', email)
 
     } else {
       console.error('No email provided')
-      ga('send', 'event', 'submit', 'emailerror');
+      ga('send', 'event', 'submit-email-error')
     }
   }
 })
