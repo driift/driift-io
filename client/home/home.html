@@ -1,16 +1,21 @@
 <template name="home">
-  {{#unless email}}
-  <form class="register">
-    <div class="input-group">
-      <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
-      <span class="input-group-btn">
-        <button class="btn btn-primary">Go</button>
-      </span>
+  <div class="mask">
+    <header>
+      <h1></h1>
+    </header>
+    {{#unless email}}
+    <form class="register">
+      <div class="input-group">
+        <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
+        <span class="input-group-btn">
+          <button class="btn btn-primary">Go</button>
+        </span>
+      </div>
+    </form>
+    {{else}}
+    <div class="confirm">
+      <strong>THANKS</strong>
     </div>
-  </form>
-  {{else}}
-  <div class="confirm">
-    <strong>We'll get back to you shortly</strong>
+    {{/unless}}
   </div>
-  {{/unless}}
 </template>

@@ -21,6 +21,7 @@ Template.home.events({
 
     if(email) {
       Session.set('email', email)
+      $('body').addClass('thanks')
 
       Emails.insert({
         email: email,

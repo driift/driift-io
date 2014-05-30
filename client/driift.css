@@ -3,7 +3,12 @@ html, body{
 }
 
 body {
-  background: #21BAFB url('/driift.png') center 100px no-repeat;
+  background: #21BAFB;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+header{
+  background: transparent url('/driift.png') center 100px no-repeat;
   padding-top: 220px;
   text-align: center;
 }
