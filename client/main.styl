@@ -31,8 +31,8 @@ base(base-font-stack, base-font-size, base-font-color)
  * Debug
  */
 // edit()
-main
-  transition: all .25s ease-in-out-expo
+// main
+//   transition: all .25s ease-in-out-expo
 
 /*
   Typography
@@ -66,7 +66,7 @@ flash-notices()
   &.btn-outline
     @extend .btn.btn-primary
     background: transparent
-    border: 4px #FF3A53 solid
+    border: 3px #FF3A53 solid
   &.btn-no-outline
     @extend .btn.btn-outline
     border: 4px transparent solid
@@ -78,8 +78,8 @@ flash-notices()
 .reset-list
   reset-list()
 
-section > header
-section > nav
+.hero-fg header
+.hero-fg nav
   center(1024px)
 
 +mobile()
@@ -141,13 +141,23 @@ nav.nav
           adjust-font-size-to(14px)
 
 section.hero
-  background: url('/img/background.jpg')
-  background-size cover
+  .hero-bg
+    background: url('/img/background.jpg') no-repeat
+    background-size cover
+    height: 100%
+    width: 100%
+  .hero-fg
+    background: rgba(#000, 0.5)
+
+    width: 100%
+    height: 100%
   height: 100vh
   text-align: center
   h1
     color: #fff
     adjust-font-size-to(52px)
+    +below(2)
+      adjust-font-size-to(42px)
     font-weight: normal
   .hero-copy
     center(720px)

@@ -1,22 +1,26 @@
 <template name="home">
   <main>
   <section class='hero'>
-  <!-- HERO -->
-  {{>masterNav}}
-  <header>
-    <h1>Power up your events</h1>
-    <div class="hero-copy">
-      <p>DRIIFT is designed to streamline your events. We provide automated entry,
-        realtime analytics and attendee insights all using the latest NFC + Beacon technologies.</p>
+    <div class="hero-bg">
+      <div class="hero-fg">
+        <!-- HERO -->
+        {{>masterNav}}
+        <header>
+          <h1>Power up your events</h1>
+          <div class="hero-copy">
+            <p>DRIIFT is designed to streamline your events. We provide automated entry,
+              realtime analytics and attendee insights all using the latest NFC + Beacon technologies.</p>
+            </div>
+            <div class="hero-action">
+            <button class="btn btn-hero btn-outline">
+                Learn more
+              </button>
+            </div>
+          </header>
+      </div>
     </div>
-    <div class="hero-action">
-      <button class="btn btn-hero">
-        Learn more
-      </button>
-    </div>
-    </header>
   </section>
-    {{>htmlIpsum}}
+    <!-- {{>htmlIpsum}} -->
     {{#unless email}}
     <form class="register">
       <div class="input-group">
