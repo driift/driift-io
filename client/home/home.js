@@ -36,3 +36,11 @@ Template.home.events({
     }
   }
 })
+
+Template.masterNav.rendered = function() {
+  $(function(){
+    $('.nav-menu ul').slicknav({
+      label: ''
+    });
+  });
+}

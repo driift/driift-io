@@ -6,12 +6,17 @@ default-rhythm-border-style = solid
 relative-font-sizing = true
 min-line-padding = 4px
 font-unit = relative-font-sizing ? 1em : base-font-size
+// rupture scale config
+// base - mobile - tablet - desktop
+scale = 0 400px 600px 800px 1050px
 // ----------------------
 browser-default-font-size = 16px
 base-rhythm-unit = base-line-height / base-font-size * font-unit
 base-leader = (base-line-height - base-font-size) * font-unit / base-font-size
 base-half-leader = base-leader / 2
-base-font-stack = 'Source Sans Pro', sans-serif;
+base-font-stack = 'Source Sans Pro', sans-serif
+accent-font-stack = 'apercu_bold-webfont', 'Source Sans Pro', sans-serif
+font-stack = 'apercu_light-webfont', 'Source Sans Pro', sans-serif
 base-font-color = #000
 highlight-color = #FF3A53
 establish-baseline('normalize')
@@ -27,7 +32,7 @@ base(base-font-stack, base-font-size, base-font-color)
  */
 // edit()
 main
-  transition: all .25s ease-in-out-back
+  transition: all .25s ease-in-out-expo
 
 /*
   Typography
@@ -43,10 +48,28 @@ flash-notices()
  */
 table(border = true, striped = true, condensed = false)
 flash-notices()
-.btn.btn-hero
+
+// buttons
+
+.btn
+  btn-primary-color = #FF3A53
+  uppercase()
+  transition()
+  letter-spacing: 2px
   border: none
-  simple-button(#FF3A53, 'large', #fff)
-  font-family: base-font-stack
+  &.btn-hero
+    simple-button(btn-primary-color, 'large', #fff)
+    font-weight: normal
+  &.btn-primary
+    simple-button(btn-primary-color, 'medium', #fff)
+    font-weight: normal
+  &.btn-outline
+    @extend .btn.btn-primary
+    background: transparent
+    border: 4px #FF3A53 solid
+  &.btn-no-outline
+    @extend .btn.btn-outline
+    border: 4px transparent solid
 
 // Lists
 .inline-list
@@ -64,7 +87,34 @@ section > nav
   nav.nav .nav-brand
     height: 30px !important
 
+// Mobile menu
+.slicknav_menu
+  +below(2)
+    display: block
+  .slicknav_btn
+    reset-link()
+
+.slicknav_nav
+  li
+    a
+      padding: 0 15px
+      adjust-font-size-to(20px)
+      display: block
+      reset-link()
+      color: #fff
+      &:hover
+        background: highlight-color
+      uppercase()
+      font-family: accent-font-stack
+      font-weight: normal
+      letter-spacing: 2px
+      color: #fff
+
 nav.nav
+  +below(2)
+    min-height: -rhythm(2)
+    *
+      display: none
   align(vertical)
   position: relative
   min-height: -rhythm(4)
@@ -82,7 +132,13 @@ nav.nav
     ul
       float: right
       li
+        uppercase()
+        font-family: accent-font-stack
+        letter-spacing: 2px
         color: #fff
+        a
+          link(#fff)
+          adjust-font-size-to(14px)
 
 section.hero
   background: url('/img/background.png')

@@ -2,17 +2,7 @@
   <main>
   <section class='hero'>
   <!-- HERO -->
-  <nav class='nav'>
-    <div class='nav-brand'><span>DRIIFT</span></div>
-    <div class="nav-menu">
-      <ul class='ul inline-list'>
-        <li>Our Events</li>
-        <li>Pricing</li>
-        <li>About Us</li>
-        <li>Sign In</li>
-      </ul>
-    </div>
-  </nav>
+  {{>masterNav}}
   <header>
     <h1>Power up your events</h1>
     <div class="hero-copy">
@@ -224,4 +214,18 @@
   </div>
 
   <hr />
+</template>
+
+<template name="masterNav">
+  <nav id='masterNav' class='nav'>
+    <div class='nav-brand'><span>DRIIFT</span></div>
+    <div class="nav-menu">
+      <ul class='ul inline-list'>
+        <li><a href="">Our Events</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
 </template>
