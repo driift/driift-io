@@ -48,6 +48,13 @@ flash-notices()
   simple-button(#FF3A53, 'large', #fff)
   font-family: base-font-stack
 
+// Lists
+.inline-list
+  inline-list()
+
+.reset-list
+  reset-list()
+
 section > header
 section > nav
   center(1024px)
@@ -62,11 +69,20 @@ nav.nav
   position: relative
   min-height: -rhythm(4)
   .nav-brand
+    col(1/4)
     background: url('/img/driift-logo.png') no-repeat left center
     background-size: contain
     text-indent: -99999px
     width: 224px
     height: 43px
+    span
+      display: none
+  .nav-menu
+    col(3/4)
+    ul
+      float: right
+      li
+        color: #fff
 
 section.hero
   background: url('/img/background.png')
