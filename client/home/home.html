@@ -1,42 +1,44 @@
 <template name="home">
   <main>
-  <section class='hero'>
-    <div class="hero-bg">
-      <div class="hero-fg">
-        <!-- HERO -->
-        {{>masterNav}}
-        <header>
-          <h1>Power up your events</h1>
-          <div class="hero-copy">
-            <p>DRIIFT is designed to streamline your events. We provide automated entry,
-              realtime analytics and attendee insights all using the latest NFC + Beacon technologies.</p>
+    <section class='hero'>
+      <div class="hero-bg">
+        <div class="hero-fg">
+          <div class="contain">
+            <!-- HERO -->
+            {{>masterNav}}
+            <header>
+              <h1>Power up your events</h1>
+              <div class="hero-copy">
+                <p>DRIIFT is designed to streamline your events. We provide automated entry,
+                  realtime analytics and attendee insights all using the latest NFC + Beacon technologies.</p>
+                </div>
+                <div class="hero-action">
+                  <button class="btn btn-hero btn-outline">
+                    Learn more
+                  </button>
+                </div>
+              </header>
             </div>
-            <div class="hero-action">
-            <button class="btn btn-hero btn-outline">
-                Learn more
-              </button>
-            </div>
-          </header>
+          </div>
+        </div>
+      </section>
+      <!-- {{>htmlIpsum}} -->
+      {{#unless email}}
+      <form class="register">
+        <div class="input-group">
+          <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
+          <span class="input-group-btn">
+            <button class="btn btn-primary">Go</button>
+          </span>
+        </div>
+      </form>
+      {{else}}
+      <div class="confirm">
+        <strong>THANKS</strong>
       </div>
-    </div>
-  </section>
-    <!-- {{>htmlIpsum}} -->
-    {{#unless email}}
-    <form class="register">
-      <div class="input-group">
-        <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
-        <span class="input-group-btn">
-          <button class="btn btn-primary">Go</button>
-        </span>
-      </div>
-    </form>
-    {{else}}
-    <div class="confirm">
-      <strong>THANKS</strong>
-    </div>
-    {{/unless}}
-  </main>
-</template>
+      {{/unless}}
+    </main>
+  </template>
 
 <template name='htmlIpsum'>
   <h1 id="main">Bitters example page</h1>

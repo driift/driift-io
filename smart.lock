@@ -4,7 +4,11 @@
     "basePackages": {
       "iron-router": {},
       "iron-router-auth": {},
-      "moment": {}
+      "moment": {},
+      "driift-ui-common": {
+        "git": "ssh://git@github.com/driift/driift-ui-common.git",
+        "branch": "master"
+      }
     },
     "packages": {
       "iron-router": {
@@ -22,10 +26,20 @@
         "tag": "v2.6.0",
         "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
       },
+      "driift-ui-common": {
+        "git": "ssh://git@github.com/driift/driift-ui-common.git",
+        "branch": "master",
+        "commit": "a1fd2566c8e13ec82ebeb6496442bbd2475d18e2"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
         "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+      },
+      "nprogress": {
+        "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
+        "tag": "v0.0.4",
+        "commit": "8333206b751a24fac1fbd1b03fa37621bcefe50c"
       }
     }
   }

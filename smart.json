@@ -2,6 +2,9 @@
   "packages": {
     "iron-router": {},
     "iron-router-auth": {},
-    "moment": {}
+    "moment": {},
+    "driift-ui-common": {
+      "git": "ssh://git@github.com/driift/driift-ui-common.git"
+    }
   }
 }
