@@ -1,0 +1,84 @@
+@import '../../packages/driift-ui-common/ui/settings'
+
++mobile()
+  base(base-font-stack, 15px, base-font-color)
+  nav.nav .nav-brand
+    height: 30px !important
+
+section.hero
+  .hero-bg
+    background: url('https://c2.staticflickr.com/8/7362/10458691864_ec08423f56_b.jpg') center center no-repeat
+    background-size cover
+    // height: 100%
+    // width: 100%
+  .hero-fg
+    background: rgba(31, 99, 133, 0.75)
+    background-image: radial-gradient(rgba(31, 99, 133, 0.75), rgba(31, 99, 133, 0.75) + 30deg)
+    width: 100%
+    height: 100%
+  height: 100vh
+  text-align: center
+  h1
+    color: #fff
+    adjust-font-size-to(52px)
+    +below(2)
+      adjust-font-size-to(42px, 2)
+    font-weight: normal
+  .hero-copy
+    center(720px)
+    p
+      adjust-font-size-to(26px)
+      +below(2)
+        adjust-font-size-to(20px, 1.5)
+    color: #fff
+  .hero-action
+    margin-leader(2)
+  .partners
+    position: relative
+    margin: -rhythm(4) 0
+    h2
+      color: #fff
+      uppercase()
+      adjust-font-size-to(15px)
+      letter-spacing: 3px
+      font-family: base-font-stack
+      margin-trailer(1)
+    .logos
+      text-align: center
+      &:before
+        content: '';
+        position: absolute;
+        top: - -rhythm(1);
+        left: 50%;
+        width: 40%;
+        margin-left: -20%;
+        height: 1px;
+        background-color: rgba(255, 255, 255,0.5);
+        // background-image: linear-gradient(left, rgba(255,255,255,0.3), rgba(255,255,255,1), rgba(255,255,255,0.3));
+      for num in (1..5)
+        img:nth-child({num})
+          animation-delay: (num/2)s
+      img
+        animation: fadeIn 1s ease-in-out both
+        display: inline-block
+        height: 100%
+        vertical-align: middle
+        opacity: 1
+      img + img
+        margin-left: 2rem
+
+@keyframes fadeIn {
+  0% {
+    position: relative
+    top: -10px
+    opacity: 0
+  }
+  100% {
+    position: relative
+    top: 0px
+    opacity: 1
+  }
+}
+
+section .block
+  margin: -rhythm(1) 0

@@ -14,14 +14,16 @@ Template.home.helpers({
 })
 
 Template.home.events({
-  'submit': function (evt, tmpl) {
+  'click .btn-hero, click .nav-menu li': function(){
+    $('#modal-subscribe').trigger('show')
+  },
+  'submit .register': function (evt, tmpl) {
     evt.preventDefault()
 
     var email = $('#input-email').val()
 
     if(email) {
       Session.set('email', email)
-      $('body').addClass('thanks')
 
       Emails.insert({
         email: email,
