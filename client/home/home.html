@@ -238,15 +238,12 @@
 </template>
 
 <template name="masterNav">
-  <nav id='masterNav' class='nav'>
-    <div class='nav-brand'><span>DRIIFT</span></div>
-    <div class="nav-menu">
-      <ul class='ul inline-list'>
-        <li><a href="">Our Events</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Sign In</a></li>
-      </ul>
-    </div>
-  </nav>
+  {{#navigation id="masterNav"}}
+    <ul class='ul inline-list'>
+      <li><a href="">Our Events</a></li>
+      <li><a href="">Pricing</a></li>
+      <li><a href="">About Us</a></li>
+      <li><a href="">Sign In</a></li>
+    </ul>
+  {{/navigation}}
 </template>
