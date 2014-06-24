@@ -4,7 +4,8 @@
     "iron-router-auth": {},
     "moment": {},
     "driift-ui-common": {
-      "git": "ssh://git@github.com/driift/driift-ui-common.git"
+      "git": "ssh://git@github.com/driift/driift-ui-common.git",
+      "branch": "new/main-ui"
     }
   }
 }
