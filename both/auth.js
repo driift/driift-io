@@ -1,4 +1,4 @@
-var adminDomains = ['driift.io', 'tableflip.io', 'wwaves.co' ]
+var adminDomains = ['driift.io', 'tableflip.io', 'wwaves.co', 'cwaring.com' ]
 
 Auth = {
 
