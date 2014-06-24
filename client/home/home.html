@@ -8,14 +8,22 @@
             {{>masterNav}}
             <header>
               <h1>Power up your events</h1>
-              <div class="hero-copy">
-                <p>DRIIFT is designed to streamline your events. We provide automated entry,
-                  realtime analytics and attendee insights all using the latest NFC + Beacon technologies.</p>
+              <div class="block hero-copy">
+                <p>DRIIFT is designed to streamline your events.<br> We provide <strong>automated entry</strong>,
+                  <strong>realtime analytics</strong> and <strong>attendee insights</strong> all using the latest <strong>NFC + Beacon technologies</strong>.</p>
                 </div>
-                <div class="hero-action">
+                <div class="block hero-action">
                   <button class="btn btn-hero btn-outline">
                     Learn more
                   </button>
+                </div>
+                <div class="block partners">
+                  <h2>Recent partners</h2>
+                  <div class="logos align-vertical">
+                    <img src="/img/logos/BACON.png" alt="BACON Conf">
+                    <img src="/img/logos/TGE.png" alt="The Great Escape">
+                    <img src="/img/logos/LXJS.png" alt="LXJS">
+                  </div>
                 </div>
               </header>
             </div>
@@ -23,20 +31,27 @@
         </div>
       </section>
       <!-- {{>htmlIpsum}} -->
-      {{#unless email}}
-      <form class="register">
-        <div class="input-group">
-          <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
-          <span class="input-group-btn">
-            <button class="btn btn-primary">Go</button>
-          </span>
+      {{#modal name="subscribe"}}
+        {{#unless email}}
+        <form class="register">
+          <h2>We are tuning our engines</h2>
+          <p>
+          Hello driifter, we're currently in private beta working closely with a selction of partners. Please leave your email and we will make sure you’re the first to know when we're ready.
+          </p>
+          <p>In the meantime do say hi on Twitter <a href="http://twitter.com/driiftio">@driiftio</a>, we'd love to meet you.</p>
+          <div class="input-group">
+            <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
+            <span class="input-group-btn">
+              <button class="btn btn-primary">Notify me</button>
+            </span>
+          </div>
+        </form>
+        {{else}}
+        <div class="confirm">
+          <p>Thanks, we've added you to our vip list and will be in touch soon.</p>
         </div>
-      </form>
-      {{else}}
-      <div class="confirm">
-        <strong>THANKS</strong>
-      </div>
-      {{/unless}}
+        {{/unless}}
+      {{/modal}}
     </main>
   </template>
 
