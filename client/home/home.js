@@ -21,12 +21,14 @@ Template.home.events({
     evt.preventDefault()
 
     var email = $('#input-email').val()
+    var runEvents = $('#run-events:checked').length ? true : false
 
     if(email) {
       Session.set('email', email)
 
       Emails.insert({
         email: email,
+        runEvent: runEvents,
         createdAt: Date.now()
       })
 
