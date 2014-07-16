@@ -14,9 +14,6 @@ Template.home.helpers({
 })
 
 Template.home.events({
-  'click .btn-hero, click .nav-menu li': function(){
-    $('#modal-subscribe').trigger('show')
-  },
   'submit .register': function (evt, tmpl) {
     evt.preventDefault()
 

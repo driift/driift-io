@@ -1,0 +1,36 @@
+<template name="masterNav">
+  {{#navigation id="masterNav"}}
+  <ul class='ul inline-list'>
+    <li><a href="">Our Events</a></li>
+    <li><a href="">Pricing</a></li>
+    <li><a href="">About Us</a></li>
+    <li><a href="">Sign In</a></li>
+  </ul>
+  {{/navigation}}
+  {{#modal name="subscribe"}}
+    {{#unless email}}
+    <h2>We are tuning our engines</h2>
+    <p>
+      Hello driifter, we're currently in private beta working closely with a selction of fine partners. Please leave your email and we will make sure you’re the first to know more.
+    </p>
+    <p>In the meantime do say hi <a href="http://twitter.com/driiftio">@driiftio</a>, we'd love to meet you.</p>
+    <form class="register">
+      <div class="input-group">
+        <input class="form-control" id="input-email" type="email" placeholder="Email address"/>
+                <span class="input-group-btn">
+                  <button class="btn btn-primary">GO</button>
+                </span>
+      </div>
+      <div class="input-group">
+        <input id="run-events" name="run-events" type="checkbox">
+        <label for="run-events"> I also run events and want superpowers!</label>
+      </div>
+    </form>
+    {{else}}
+    <div class="confirm">
+      <p><strong>We've added you to our VIP list and will be in touch soon.</strong></p>
+      <p>❤ <a href="http://twitter.com/driiftio">@driiftio</a></p>
+    </div>
+    {{/unless}}
+  {{/modal}}
+</template>

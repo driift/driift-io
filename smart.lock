@@ -7,7 +7,7 @@
       "moment": {},
       "driift-ui-common": {
         "git": "ssh://git@github.com/driift/driift-ui-common.git",
-        "branch": "master"
+        "branch": "new/main-ui"
       }
     },
     "packages": {
@@ -28,8 +28,8 @@
       },
       "driift-ui-common": {
         "git": "ssh://git@github.com/driift/driift-ui-common.git",
-        "branch": "master",
-        "commit": "a1fd2566c8e13ec82ebeb6496442bbd2475d18e2"
+        "branch": "new/main-ui",
+        "commit": "6cefb0c72a3bec9a5ff57d146502093d85e8b0e1"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
@@ -38,8 +38,13 @@
       },
       "nprogress": {
         "git": "https://github.com/zhouzhuojie/meteor-nprogress.git",
-        "tag": "v0.0.4",
-        "commit": "8333206b751a24fac1fbd1b03fa37621bcefe50c"
+        "tag": "v0.0.5",
+        "commit": "bb88a057166e0f1386ab8bc0a1e080b48aa59159"
+      },
+      "stylus-multi": {
+        "git": "https://github.com/cwaring/meteor-stylus-multi.git",
+        "branch": "master",
+        "commit": "30f191aca45e8ae4a0d40cd3a8ca73bfba64d53e"
       }
     }
   }
