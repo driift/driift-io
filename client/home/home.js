@@ -7,6 +7,12 @@ HomeController = RouteController.extend({
   }
 })
 
+Template.home.events({
+  'click .btn-hero': function () {
+    $('#modal-subscribe').trigger('show')
+  }
+})
+
 Template.home.helpers({
   email: function () {
     return Session.get('email')
